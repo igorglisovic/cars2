@@ -69,7 +69,10 @@ const page = ({ searchParams }) => {
     setUrlForCount(urlWithoutPageAndLimit)
 
     setApiUrl(url)
+
     setParamsArray(paramsArrayValue)
+
+    console.log(paramsArrayValue, searchParams)
   }, [searchParams])
 
   // Fetch cars based on api url every time if url changed
