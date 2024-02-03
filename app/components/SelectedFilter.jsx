@@ -53,6 +53,7 @@ const SelectedFilter = ({ paramsArray, filter, url, children }) => {
           const updatedUrl =
             '/cars/search?' + filteredUrlParts.join('&').split('?')[1]
 
+          console.log('filteredUrlParts ', updatedUrl, filteredUrlParts)
           setIsHidden(true)
           router.push(updatedUrl)
         }
