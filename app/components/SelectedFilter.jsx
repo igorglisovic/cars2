@@ -14,6 +14,7 @@ const SelectedFilter = ({ paramsArray, filter, url, children }) => {
   const { filtersArray } = useFiltersContext()
 
   const handleDelete = () => {
+    console.log('Deleted if')
     if (filter?._id) {
       let modelId
 
@@ -57,6 +58,8 @@ const SelectedFilter = ({ paramsArray, filter, url, children }) => {
         }
       })
     } else {
+      console.log('Deleted else')
+
       let urlParts = url.split('&')
       let filteredUrlParts
       let indexFromPrevious
