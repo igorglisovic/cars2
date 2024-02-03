@@ -149,6 +149,8 @@ export const FiltersContextProvider = ({ children }) => {
       // Convert the Set back to an array and update filtersArray.
       setFiltersArray(Array.from(formattedSet))
     }
+
+    console.log('filtersArray ', filtersArray)
   }, [filtersArray])
 
   const updateFilterBrand = filterBrand => {

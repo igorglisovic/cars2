@@ -14,8 +14,6 @@ const SelectedFilter = ({ paramsArray, filter, url, children }) => {
   const { filtersArray } = useFiltersContext()
 
   const handleDelete = () => {
-    console.log(filtersArray)
-
     if (filter?._id) {
       let modelId
 
