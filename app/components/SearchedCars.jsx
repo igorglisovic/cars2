@@ -56,7 +56,9 @@ const SearchedCars = ({
 
     const url2 = url.split('?')[1].replace(/&?sort=[^&]*/, '')
 
-    const newUrl = `/cars/search?sort=${newSorting}${url2}`
+    const newUrl = `/cars/search?sort=${newSorting}${
+      url2[0] === '&' ? '' : '&'
+    }${url2}`
 
     console.log('newUrl ', newUrl, url, url2)
 
