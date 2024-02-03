@@ -54,22 +54,11 @@ const SearchedCars = ({
     const newSorting = e.target.value
     updateSorting(newSorting)
 
-    const url2 = url
+    const url2 = url.split('?')[1].replace(/&?sort=[^&]*/, '')
 
-    const newUrl = `/cars/search?sort=${newSorting}&page=1&${url
-      .split('&')
-      .slice(2)
-      .join('&')}`
+    const newUrl = `/cars/search?sort=${newSorting}${url2}`
 
-    console.log(
-      'newUrl ',
-      newUrl,
-      url,
-      `/cars/search?sort=${newSorting}&page=1&${url
-        .split('&')
-        .slice(2)
-        .join('&')}`
-    )
+    console.log('newUrl ', newUrl, url, url2)
 
     router.push(newUrl)
   }
